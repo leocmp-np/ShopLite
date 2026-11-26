@@ -13,6 +13,16 @@ The project demonstrates REST API development, database integration, frontend-ba
 - Reactive forms
 - RESTful API integration
 
+## Screenshots
+
+### Product Catalog (Homepage)
+
+![Product Catalog](screenshots/homeAndSearchBar.png)
+
+### Create Product
+
+![Create Product](screenshots/addProduct.png)
+
 ## Tech Stack
 
 | Backend | Frontend |
@@ -43,6 +53,9 @@ The frontend uses a component-based architecture with dedicated services and mod
 ShopLite/
 ├── backend/
 ├── frontend/
+├── screenshots/
+│   ├── homeAndSearchBar.png
+│   └── addProduct.png
 ├── .gitignore
 └── README.md
 ```
