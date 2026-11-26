@@ -1,0 +1,34 @@
+# Angular
+node_modules/
+.angular/
+dist/
+coverage/
+
+# Java / Maven
+target/
+*.class
+
+# Eclipse / Spring Tool Suite
+.settings/
+.classpath
+.project
+.factorypath
+.springBeans
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Environment and local configuration
+.env
+.env.*
+!.env.example
+application-local.properties
+
+# Logs
+*.log
+
+# Operating system
+.DS_Store
+Thumbs.db

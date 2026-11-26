@@ -1,0 +1,27 @@
+<section>
+  <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-end gap-3 mb-4">
+    <div>
+      <h1 class="h3 mb-1">I nostri prodotti</h1>
+      <p class="text-body-secondary mb-0">Scopri il catalogo Shoplite.</p>
+    </div>
+    <div class="search-field">
+      <label class="visually-hidden" for="product-search">Cerca prodotto</label>
+      <input class="form-control" id="product-search" type="search" placeholder="Cerca prodotto..." [formControl]="searchControl">
+    </div>
+  </div>
+
+  <div class="row g-3">
+    @for (product of products(); track product.id) {
+      <div class="col-sm-6 col-lg-4">
+        <app-product-card
+          [product]="product"
+          (deleteProduct)="removeProduct($event)">
+        </app-product-card>
+      </div>
+    } @empty {
+      <div class="col-12">
+        <p class="alert alert-light border mb-0">Nessun prodotto disponibile</p>
+      </div>
+    }
+  </div>
+</section>

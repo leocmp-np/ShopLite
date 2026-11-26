@@ -1,0 +1,39 @@
+<section class="card border-0 shadow-sm mx-auto form-card">
+  <div class="card-body p-4 p-md-5">
+    <h1 class="h3 mb-1">Inserisci prodotto</h1>
+    <p class="text-body-secondary mb-4">Compila i dettagli del nuovo prodotto.</p>
+
+    <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label class="form-label" for="name">Nome</label>
+        <input class="form-control" id="name" type="text" formControlName="name" placeholder="Es. Tazza">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label" for="description">Descrizione</label>
+        <textarea class="form-control" id="description" rows="3" formControlName="description" placeholder="Descrizione del prodotto"></textarea>
+      </div>
+
+      <div class="row g-3 mb-3">
+        <div class="col-sm-6">
+          <label class="form-label" for="price">Prezzo (€)</label>
+          <input class="form-control" id="price" type="number" formControlName="price">
+        </div>
+        <div class="col-sm-6">
+          <label class="form-label" for="quantity">Quantità</label>
+          <input class="form-control" id="quantity" type="number" formControlName="quantity">
+        </div>
+      </div>
+
+      <div class="mb-4">
+        <label class="form-label" for="category">Categoria</label>
+        <input class="form-control" id="category" type="text" formControlName="category" placeholder="Es. Accessori">
+      </div>
+
+      <button class="btn btn-primary px-4" type="submit" [disabled]="productForm.invalid">
+        Aggiungi prodotto
+      </button>
+    </form>
+  </div>
+</section>
+
